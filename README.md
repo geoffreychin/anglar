@@ -1,1 +1,4 @@
 # generator-anglar
+
+test
+

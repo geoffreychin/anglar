@@ -1,0 +1,53 @@
+<?php
+
+class ##resourcename##Controller extends BaseController {
+
+	public function __construct(\##resourcename##Service $##lresourcename##Service)
+	{
+		$this->##lresourcename##Service = $##lresourcename##Service;
+		$this->baseResponse = array('status'=>'ok','response'=>'Went well!');
+	}
+
+	public function ##resourcename##Dashboard()
+	{
+		return View::make('##resourcename##Dashboard');
+	}
+
+	public function get##resourcename##($id = null)
+	{
+		$respData = $this->##lresourcename##Service->get($id);
+		$this->baseResponse['data'] = $respData;
+		return Response::json($this->baseResponse);
+	}
+
+	public function save##resourcename##()
+	{
+		$save_data = Input::get();
+		$status = $this->##lresourcename##Service->create($save_data );
+
+		if(!$status)	
+			$this->baseResponse = array('status'=>'err','response'=>'Did not save');
+
+		return Response::json($this->baseResponse);	
+	}
+
+	public function update##resourcename##($id=null)
+	{
+		$update_data = Input::get();
+		$status = $this->##lresourcename##Service->update($id,$update_data);
+		if(!$status)	
+			$this->baseResponse = array('status'=>'err','response'=>'Did not update');
+
+		return Response::json($this->baseResponse);	
+	}
+
+	public function delete##resourcename##($id = null)
+	{
+		$status = $this->##lresourcename##Service->delete($id);
+		if(!$status)	
+			$this->baseResponse = array('status'=>'err','response'=>'Did not delete');
+
+		return Response::json($this->baseResponse);	
+	}
+
+}

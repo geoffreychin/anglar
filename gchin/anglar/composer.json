@@ -1,0 +1,22 @@
+{
+    "name": "gchin/anglar",
+    "description": "",
+    "authors": [
+        {
+            "name": "geoffrey chin",
+            "email": "geoffrey.chin@complex.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0"
+    },
+    "autoload": {
+        "classmap": [
+            "src/command"
+        ],
+        "psr-0": {
+            "Gchin\\Anglar\\": "src/"
+        }
+    },
+    "minimum-stability": "stable"
+}

@@ -1,0 +1,31 @@
+angular.module('##lresourcename##App').service('##lresourcename##Service',##lresourcename##Service);
+
+##lresourcename##Service.$inject = ['$resource'];
+
+function ##lresourcename##Service($resource){
+	var base = '/api/##lresourcename##';
+    var service = $resource(base,{},{
+		get##lresourcename##:{
+			method: 'GET',
+			url: base
+		},
+		add##lresourcename##:{
+			method:'PUT',
+			url: base
+		},
+		delete##lresourcename##:{
+			method:'DELETE',
+			url: base+'/:id'
+		},
+		update##lresourcename##:{
+			method:'POST',
+			url: base+'/:id',
+			params:{
+				id:'@id'
+			}
+		},
+    });
+    return service;
+}
+
+

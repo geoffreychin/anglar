@@ -1,0 +1,33 @@
+<?php
+
+class ##resourcename##Service{
+	
+	protected $resource = '##resourcename##';
+
+	public function __construct()
+	{
+
+	}
+
+	public function get()
+	{
+
+	}
+
+	public function create()
+	{
+
+	}
+
+	public function update()
+	{
+
+	}	
+
+	public function delete()
+	{
+
+	}
+
+}
+?>

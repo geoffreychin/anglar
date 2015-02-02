@@ -1,0 +1,9 @@
+
+
+##Dashboard##
+//EndPoints for ##resourcename##
+Route::GET('/api/##lresourcename##/{id}/', array('uses' => '##resourcename##Controller@get##resourcename##'));
+Route::GET('/api/##lresourcename##/', array('uses' => '##resourcename##Controller@get##resourcename##'));
+Route::DELETE('/api/##lresourcename##/{id}/', array('uses' => '##resourcename##Controller@delete##resourcename##'));
+Route::PUT('/api/##lresourcename##/', array('uses' => '##resourcename##Controller@save##resourcename##'));
+Route::POST('/api/##lresourcename##/{id}/', array('uses' => '##resourcename##Controller@update##resourcename##'));

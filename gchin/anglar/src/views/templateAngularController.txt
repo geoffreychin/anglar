@@ -1,0 +1,65 @@
+angular.module('##lresourcename##App').controller('##resourcename##Controller',##resourcename##Controller);
+
+##resourcename##Controller.$inject = ['$scope','$rootScope','##lresourcename##Service'];
+
+function ##resourcename##Controller($scope, $rootScope, ##lresourcename##Service){
+	
+	var vm = this;
+	vm.msg='';
+	vm.errmsg='';
+	vm.##lresourcename##s = [];
+
+	//METHODS
+	vm.get##resourcename## = get##resourcename##;
+	vm.update##resourcename## = update##resourcename##;
+	vm.delete##resourcename## = delete##resourcename##;
+	vm.save##resourcename## = save##resourcename##;
+	
+	init();
+
+	function get##resourcename##()
+	{
+		##lresourcename##Service.get##lresourcename##(
+		{},function(){
+
+		});
+	}
+
+	function save##resourcename##(data)
+	{
+		##lresourcename##Service.add##lresourcename##(
+		data,function(){
+
+		});
+	}
+
+	function update##resourcename##(id,data)
+	{
+		data.id = id;
+		##lresourcename##Service.update##lresourcename##(
+		data,function(){
+
+		});
+	}
+
+	function delete##resourcename##(id)
+	{
+		##lresourcename##Service.delete##lresourcename##(
+		{id:id},function(){
+
+		});
+	}
+
+	function init()
+	{
+		get##resourcename##();
+		save##resourcename##({data:'somedata'});
+		update##resourcename##('someid',{data:'somedata'});
+		delete##resourcename##('someid');
+	}
+}
+
+
+
+
+

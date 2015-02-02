@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html data-ng-app="##lresourcename##App">
+<head>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body data-ng-controller="##resourcename##Controller">
+
+<!--Jquery-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<!--Bootstrap-->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<!--Angular-->
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.11/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.11/angular-resource.min.js"></script>
+
+<!--App-->
+<script src="/ng-##lresourcename##-app.js"></script> 
+
+<!--Controlers-->
+<script src="/ng-##lresourcename##-controller.js"></script> 
+
+<!--Directives-->
+
+<!--Services-->
+<script src="/ng-##lresourcename##-service.js"></script>  
+</body>
+</html>
